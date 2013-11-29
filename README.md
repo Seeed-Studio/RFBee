@@ -14,17 +14,16 @@ Just build it and then upload it to rfbeev1.1 board with a UartSBee or a XbeeShi
 
 For more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/index.php?title=RFbee_V1.1_-_Wireless_Arduino_compatible_node).
 
-
-### Contributing:
-Contributing to this software is warmly welcomed. You can do this basically by<br>
-[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
-for operating guide). Adding change log and your contact into file header is encouraged.<br>
-Thanks for your contribution.
     
 ----
 
 This software is written by community contributors and modified by seeed studio.<br>
 It is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+
+Contributing to this software is warmly welcomed. You can do this basically by<br>
+[forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
+for operating guide). Adding change log and your contact into file header is encouraged.<br>
+Thanks for your contribution.
 
 Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
 Benefiting from local manufacture power and convenient global logistic system, <br>
