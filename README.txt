@@ -1,22 +1,18 @@
-"<>"代表占位符，需要用你的表达替换，用英文。
-<库或软件的名称，下面一行短横线代表是中标题格式，请不要删除>
+RFBeeV1.1
 ---------------------------------------------------------
 
-<可选: 库或软件涉及到公司产品的在此介绍，不涉及到产品本段省略>
-插入一张带链接的图片（除<>外其它括号均表示格式标签，不要删除）
-[![<图片名称>](<图片URL>)](<产品链接>)
-例: [![WiFiBeeV2](http://www.seeedstudio.com/depot/images/product/wifi%20bee%20v2.jpg)](http://www.seeedstudio.com/depot/wifi-bee-v20-p-1637.html)
+This software is for seeedstudio's RFBeeV1.1.<br>
+The RFBee is a RF module providing easy and flexible wireless data transmission between devices.<br>
+It is based on a AVR Atmega168 working as a fully functional Arduino connected via SPI to a TI CC1101 RF transceiver.<br>
 
-<一段产品描述>
+[![rfbeev11](http://www.seeedstudio.com/depot/images/rfbee1.jpg)](http://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
+
 
 ### Usage:
-<库、软件的使用介绍：比如检出哪个文件夹或下载哪个zip包，放在哪个目录，include哪些头文件。
+This firmware is a arduino sketch. It can be build under Arduino IDE ver 1.0.5.<br>
+Just build it and then upload it to rfbeev1.1 board with a UartSBee or a XbeeShield.<br> 
 
-若是比较复杂的软件，涉及到编译、安装的，在此说明编译环境要求、依赖库、编译命令、安装命令等。>
-
-<格式提示：**text**表示加粗文字，*text*表示斜体文字，<br>表示强制换行>
-
-For more information, please refer to [wiki page](<wiki url>).
+For more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/index.php?title=RFbee_V1.1_-_Wireless_Arduino_compatible_node).
 
 
 ### Contributing:
@@ -27,8 +23,8 @@ Thanks for your contribution.
     
 ----
 
-This software is written by <your name @your_email.com> for seeed studio<br>
-and is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+This software is written by community contributors and modified by seeed studio.<br>
+It is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
 
 Seeed Studio is an open hardware facilitation company based in Shenzhen, China. <br>
 Benefiting from local manufacture power and convenient global logistic system, <br>
