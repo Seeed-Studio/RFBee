@@ -33,9 +33,7 @@
 #define BUFFLEN CCx_PACKT_LEN
 #define SERIALCMDMODE 1
 #define SERIALDATAMODE 0
-#define SERIALCMDTERMINATOR 13  // use <CR> to terminate commandsvoid loop() {
-  /* code */
-}
+#define SERIALCMDTERMINATOR 13  // use <CR> to terminate commands
 
 void readSerialCmd();
 void txDataFromSerialToRf();
