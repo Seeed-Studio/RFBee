@@ -44,7 +44,7 @@ void transmitData(byte *txData, byte len, byte srcAddress, byte destAddress)
     byte size;
     stat = CCx.Read(CCx_TXBYTES, &size);
 
-    if (0 == size)
+    if (0 == (size & 0x7f))
     {
       break;
     } 
