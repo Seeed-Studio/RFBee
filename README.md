@@ -18,7 +18,7 @@ For more information, please refer to [wiki page](http://www.seeedstudio.com/wik
 ----
 
 This software is written by community contributors and modified by seeed studio.<br>
-It is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php). Check License.txt for more information.<br>
+It is licensed under [The MIT License](http://opensource.org/licenses/mit-license.php) by getting grant from the author. Check License.txt for more information.<br>
 
 Contributing to this software is warmly welcomed. You can do this basically by<br>
 [forking](https://help.github.com/articles/fork-a-repo), committing modifications and then [pulling requests](https://help.github.com/articles/using-pull-requests) (follow the links above<br>
