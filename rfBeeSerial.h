@@ -60,20 +60,20 @@ volatile int sleepCounter;
 // RFbee AT commands
 
 // Need to define the labels outside the struct :-(
-static char DA_label[] PROGMEM="DA";
-static char MA_label[] PROGMEM="MA";
-static char AC_label[] PROGMEM="AC";
-static char PA_label[] PROGMEM="PA";
-static char TH_label[] PROGMEM="TH";
-static char BD_label[] PROGMEM="BD";
-static char MD_label[] PROGMEM="MD";
-static char FV_label[] PROGMEM="FV";
-static char HV_label[] PROGMEM="HV";
-static char RS_label[] PROGMEM="RS";
-static char CF_label[] PROGMEM="CF";
-static char OF_label[] PROGMEM="OF";
-static char O0_label[] PROGMEM="O0";
-static char SL_label[] PROGMEM="SL";
+static const char DA_label[] PROGMEM="DA";
+static const char MA_label[] PROGMEM="MA";
+static const char AC_label[] PROGMEM="AC";
+static const char PA_label[] PROGMEM="PA";
+static const char TH_label[] PROGMEM="TH";
+static const char BD_label[] PROGMEM="BD";
+static const char MD_label[] PROGMEM="MD";
+static const char FV_label[] PROGMEM="FV";
+static const char HV_label[] PROGMEM="HV";
+static const char RS_label[] PROGMEM="RS";
+static const char CF_label[] PROGMEM="CF";
+static const char OF_label[] PROGMEM="OF";
+static const char O0_label[] PROGMEM="O0";
+static const char SL_label[] PROGMEM="SL";
 
 // Supported commands, Commands and parameters in ASCII
 // Example: ATDA14 means: change the RF module Destination Address to 14
@@ -91,7 +91,7 @@ typedef struct
 }  AT_Command_t;
 
 
-static AT_Command_t atCommands[] PROGMEM =
+static const AT_Command_t atCommands[] PROGMEM =
 {
 // Addressing:
   { DA_label, CONFIG_DEST_ADDR, 3 , 255, false, 0 },             // Destination address   (0~255)
@@ -118,13 +118,13 @@ static AT_Command_t atCommands[] PROGMEM =
 // error codes and labels
 byte errNo;
 
-static char error_0[] PROGMEM="no error";
-static char error_1[] PROGMEM="received invalid RF data size";
-static char error_2[] PROGMEM="received invalid RF data";
-static char error_3[] PROGMEM="RX buffer overflow";
-static char error_4[] PROGMEM="CRC check failed";
+static const char error_0[] PROGMEM="no error";
+static const char error_1[] PROGMEM="received invalid RF data size";
+static const char error_2[] PROGMEM="received invalid RF data";
+static const char error_3[] PROGMEM="RX buffer overflow";
+static const char error_4[] PROGMEM="CRC check failed";
 
-static char *error_codes[] PROGMEM={
+static const char * const error_codes[] PROGMEM={
   error_0,
   error_1,
   error_2,
@@ -132,7 +132,7 @@ static char *error_codes[] PROGMEM={
 };
 
 
-long baudRateTable[] PROGMEM= {9600,19200,38400,115200,57600};
+const long baudRateTable[] PROGMEM= {9600,19200,38400,115200,57600};
 
 // operating modes, used by ATMD
 
