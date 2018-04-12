@@ -5,14 +5,15 @@ This software is for seeedstudio's RFBeeV1.1.<br>
 The RFBee is a RF module providing easy and flexible wireless data transmission between devices.<br>
 It is based on a AVR Atmega168 working as a fully functional Arduino connected via SPI to a TI CC1101 RF transceiver.<br>
 
-[![rfbeev11](http://www.seeedstudio.com/depot/images/rfbee1.jpg)](http://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
+![](https://statics3.seeedstudio.com/images/rfbee1.jpg)
 
+[RFbee V1.1 - Wireless arduino compatible node](https://www.seeedstudio.com/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
 
 ### Usage:
 This firmware is a arduino sketch. It can be build under Arduino IDE ver 1.0.5.<br>
 Just build it and then upload it to rfbeev1.1 board with a UartSBee or a XbeeShield.<br> 
 
-For more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/index.php?title=RFbee_V1.1_-_Wireless_Arduino_compatible_node).
+For more information, please refer to [wiki page](http://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/).
 
     
 ----
