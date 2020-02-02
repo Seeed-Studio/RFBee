@@ -80,18 +80,18 @@
 // Strobe commands
 #define CCx_SRES         0x30        // Reset chip.
 #define CCx_SFSTXON      0x31        // Enable and calibrate frequency synthesizer (if MCSM0.FS_AUTOCAL=1).
-                                        // If in RX/TX: Go to a wait state where only the synthesizer is
-                                        // running (for quick RX / TX turnaround).
+// If in RX/TX: Go to a wait state where only the synthesizer is
+// running (for quick RX / TX turnaround).
 #define CCx_SXOFF        0x32        // Turn off crystal oscillator.
 #define CCx_SCAL         0x33        // Calibrate frequency synthesizer and turn it off
-                                        // (enables quick start).
+// (enables quick start).
 #define CCx_SRX          0x34        // Enable RX. Perform calibration first if coming from IDLE and
-                                        // MCSM0.FS_AUTOCAL=1.
+// MCSM0.FS_AUTOCAL=1.
 #define CCx_STX          0x35        // In IDLE state: Enable TX. Perform calibration first if
-                                        // MCSM0.FS_AUTOCAL=1. If in RX state and CCA is enabled:
-                                        // Only go to TX if channel is clear.
+// MCSM0.FS_AUTOCAL=1. If in RX state and CCA is enabled:
+// Only go to TX if channel is clear.
 #define CCx_SIDLE        0x36        // Exit RX / TX, turn off frequency synthesizer and exit
-                                        // Wake-On-Radio mode if applicable.
+// Wake-On-Radio mode if applicable.
 #define CCx_SAFC         0x37        // Perform AFC adjustment of the frequency synthesizer
 #define CCx_SWOR         0x38        // Start automatic RX polling sequence (Wake-on-Radio)
 #define CCx_SPWD         0x39        // Enter power down mode when CSn goes high.
@@ -99,7 +99,7 @@
 #define CCx_SFTX         0x3B        // Flush the TX FIFO buffer.
 #define CCx_SWORRST      0x3C        // Reset real time clock.
 #define CCx_SNOP         0x3D        // No operation. May be used to pad strobe commands to two
-                                        // bytes for simpler software.
+// bytes for simpler software.
 // Status registers (read & burst)
 #define CCx_PARTNUM      (0x30 | 0xc0)
 #define CCx_VERSION      (0x31 | 0xc0)
@@ -122,8 +122,7 @@
 
 #define CCx_PACKT_LEN   (CCx_FIFO_SIZE - 3) // see section 15.3 of the datasheet
 
-class CCX
-{
+class CCX {
   public:
     CCX(void);
     byte Read(byte addr, byte* data);
@@ -140,7 +139,7 @@ class CCX
     void Setup(byte configId);
     void ReadSetup(void);
     // set power amplification using a table
-    void setPA(byte configId, byte paIndex );
+    void setPA(byte configId, byte paIndex);
     // switch radio mode
     void Mode(byte);
     // decode RSSI value

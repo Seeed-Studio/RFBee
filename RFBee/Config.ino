@@ -26,61 +26,57 @@
 
 //---------- constructor ----------------------------------------------------
 
-CONFIG::CONFIG(){}
+CONFIG::CONFIG() {}
 
 
 //------------------ reset ---------------------------------------------------
 
-void CONFIG::reset()
-{
-    EEPROM.write(CONFIG_RFBEE_MARKER, CONFIG_RFBEE_MARKER_VALUE );
-    EEPROM.write(CONFIG_FW_VERSION,FIRMWAREVERSION);
-    EEPROM.write(CONFIG_DEST_ADDR,0);
-    EEPROM.write(CONFIG_MY_ADDR,0);
-    EEPROM.write(CONFIG_ADDR_CHECK,0x00);
-    EEPROM.write(CONFIG_TX_THRESHOLD,0x01);
-    EEPROM.write(CONFIG_BDINDEX,0x00);
-    EEPROM.write(CONFIG_PAINDEX,0x07);
-    EEPROM.write(CONFIG_CONFIG_ID,0x00);
-    if (EEPROM.read(CONFIG_HW_VERSION) < 11)
-          EEPROM.write(CONFIG_HW_VERSION,11);  // dirty hack to ensure rfBee's without a hardware version get their hardware version set to 1.0
-    EEPROM.write(CONFIG_OUTPUT_FORMAT,0x00);   
-    EEPROM.write(CONFIG_RFBEE_MODE,0x00); 
+void CONFIG::reset() {
+    EEPROM.write(CONFIG_RFBEE_MARKER, CONFIG_RFBEE_MARKER_VALUE);
+    EEPROM.write(CONFIG_FW_VERSION, FIRMWAREVERSION);
+    EEPROM.write(CONFIG_DEST_ADDR, 0);
+    EEPROM.write(CONFIG_MY_ADDR, 0);
+    EEPROM.write(CONFIG_ADDR_CHECK, 0x00);
+    EEPROM.write(CONFIG_TX_THRESHOLD, 0x01);
+    EEPROM.write(CONFIG_BDINDEX, 0x00);
+    EEPROM.write(CONFIG_PAINDEX, 0x07);
+    EEPROM.write(CONFIG_CONFIG_ID, 0x00);
+    if (EEPROM.read(CONFIG_HW_VERSION) < 11) {
+        EEPROM.write(CONFIG_HW_VERSION,
+                     11);    // dirty hack to ensure rfBee's without a hardware version get their hardware version set to 1.0
+    }
+    EEPROM.write(CONFIG_OUTPUT_FORMAT, 0x00);
+    EEPROM.write(CONFIG_RFBEE_MODE, 0x00);
 }
 
 //------------------ get -----------------------------------------------
 
-byte CONFIG::get(byte idx)
-{
-  return _cfg[idx];
+byte CONFIG::get(byte idx) {
+    return _cfg[idx];
 }
-byte CONFIG::get_eep(byte idx)
-{
-  return (EEPROM.read(idx));
+byte CONFIG::get_eep(byte idx) {
+    return (EEPROM.read(idx));
 }
 
 
 //------------------ get Select ---------------------------------------------
-void CONFIG::set(byte idx, byte value)
-{
-  _cfg[idx] = value;
-  EEPROM.write(idx,value);
+void CONFIG::set(byte idx, byte value) {
+    _cfg[idx] = value;
+    EEPROM.write(idx, value);
 }
 
-int CONFIG::initialized()
-{
- if (( EEPROM.read(CONFIG_RFBEE_MARKER) == CONFIG_RFBEE_MARKER_VALUE) &&
-     ( EEPROM.read(CONFIG_FW_VERSION) == FIRMWAREVERSION))
-     return OK;
- return ERR; 
+int CONFIG::initialized() {
+    if ((EEPROM.read(CONFIG_RFBEE_MARKER) == CONFIG_RFBEE_MARKER_VALUE) &&
+            (EEPROM.read(CONFIG_FW_VERSION) == FIRMWAREVERSION)) {
+        return OK;
+    }
+    return ERR;
 }
 
-void CONFIG::load_default()
-{
-  for (int i=0; i<= CONFIG_RFBEE_MODE; i++)
-  {
-    _cfg[i] = EEPROM.read(i);
-  }
+void CONFIG::load_default() {
+    for (int i = 0; i <= CONFIG_RFBEE_MODE; i++) {
+        _cfg[i] = EEPROM.read(i);
+    }
 }
 //---------- preinstantiate Config object --------------------------------------
 

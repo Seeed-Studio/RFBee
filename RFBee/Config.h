@@ -41,21 +41,20 @@
 // marker
 #define CONFIG_RFBEE_MARKER_VALUE 0xAA
 
-class CONFIG
-{
+class CONFIG {
   public:
     CONFIG(void);
     void reset(void);
     byte get(byte);
     byte get_eep(byte);
-    void set(byte,byte);
+    void set(byte, byte);
     int initialized();
     void load_default();
-    
+
   private:
-    byte _cfg[CONFIG_RFBEE_MODE+1];
+    byte _cfg[CONFIG_RFBEE_MODE + 1];
 };
 
-extern CONFIG Config; 
+extern CONFIG Config;
 
 #endif
