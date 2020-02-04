@@ -1,4 +1,4 @@
-RFBeeV1.1
+RFBeeV1.1  [![Build Status](https://travis-ci.com/Seeed-Studio/RFBee.svg?branch=master)](https://travis-ci.com/Seeed-Studio/RFBee)
 ---------------------------------------------------------
 
 This software is for seeedstudio's RFBeeV1.1.<br>
